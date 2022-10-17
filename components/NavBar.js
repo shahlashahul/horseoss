@@ -104,24 +104,7 @@ const NavBar = () => {
               </Button>
             
           </Box>
-          <Box sx={{display:{xs:'flex',md:'none', } }}>
-            
-            <Button
-              
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'black', display: 'block' }}
-            >
-
-               <ul style={{listStyleType:'none',display:'flex' ,}}>
-              <li > <Typography sx={{fontSize:14}}> <CallIcon sx={{ display:'inline',fontSize:'small'}}/> +966 1234567890</Typography></li>
-              <li > <Typography sx={{fontSize:14}}>SAR <ArrowDropDownIcon sx={{ display:'inline' ,fontSize:'small'}}/></Typography></li>
-              <li > <Typography sx={{fontSize:14}}>UAE <ArrowDropDownIcon sx={{ display:'inline' ,fontSize:'small'}}/></Typography></li> 
-              <li  ><Button style={{backgroundColor:'green',color:'white', borderRadius:40,height:50}}> <ArrowCircleRightIcon />Login or SignUp</Button> </li>
-          </ul>
-
-            </Button>
           
-        </Box>
 
           
         </Toolbar>
