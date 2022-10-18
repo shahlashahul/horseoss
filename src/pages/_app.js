@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@mui/styles";
 import "../styles/globals.css";
-import theme from "../src/theme";
+import theme from "../theme";
 
 
 function MyApp({ Component, pageProps }) {

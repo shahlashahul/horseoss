@@ -15,6 +15,7 @@ import CallIcon from '@mui/icons-material/Call';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { FormControl, InputLabel, Select } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Link from "@mui/material/Link";
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -95,10 +96,10 @@ const NavBar = () => {
               >
 
                  <ul style={{listStyleType:'none',display:'flex'}}>
-                <li style={{marginLeft:400}}> <Typography> <CallIcon style={{ display:'inline'}}/> +966 1234567890</Typography></li>
+                <li style={{marginLeft:400}}> <Link href='/TermsAndConditions'><Typography> <CallIcon style={{ display:'inline'}}/> TermsAndConditions</Typography></Link></li>
                 <li style={{marginLeft:60}}> <Typography>SAR <ArrowDropDownIcon style={{ display:'inline'}}/></Typography></li>
                 <li style={{marginLeft:60}}> <Typography>UAE <ArrowDropDownIcon style={{ display:'inline'}}/></Typography></li> 
-                <li style={{marginLeft:150, }} ><Button style={{backgroundColor:'green',color:'white', borderRadius:40,height:50}}> <ArrowCircleRightIcon />Login or SignUp</Button> </li>
+                
             </ul>
 
               </Button>
