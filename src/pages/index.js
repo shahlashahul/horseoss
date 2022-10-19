@@ -1,7 +1,7 @@
 
 
 import Layout from "../../components/Layout";
-import TermsAndConditions from "./TermsAndConditions";
+
 
 
 

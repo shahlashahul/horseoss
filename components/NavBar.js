@@ -1,24 +1,24 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import CallIcon from '@mui/icons-material/Call';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import { FormControl, InputLabel, Select } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import CallIcon from "@mui/icons-material/Call";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import { FormControl, InputLabel, Select } from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Link from "@mui/material/Link";
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ["Products", "Pricing", "Blog"];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,74 +40,88 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static" style={{height:100, backgroundColor:"whitesmoke" }}>
+    <AppBar
+      position="static"
+      style={{ height: 100, backgroundColor: "whitesmoke" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-         <ul style={{listStyleType:'none'}}>
-         <li> <Typography
-            
-            
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'flex' },
-              fontFamily: 'TimesNewRoman',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'black',
-              textDecoration: 'none',
-              fontSize:25,
-              display:'block',
-              
-            }}
-          >
-            Horseoss
-          </Typography> </li>
-         <li> <Typography
-            
-            
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'flex' },
-              fontFamily: 'TimesNewRoman',
-              fontWeight: 700,
-            
-              color: 'black',
-              textDecoration: 'none',
-              fontSize:18,
-             
-            }}
-          >
-            Saddle up with Technology
-          </Typography></li>
-          </ul> 
-          
-          
-          
-          <Box sx={{display:{xs:'none',md:'flex'} }}>
-            
-              <Button
-                
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
+          <ul style={{ listStyleType: "none" }}>
+            <li>
+              {" "}
+              <Typography
+                component="a"
+                href="/"
+                sx={{
+                  mr: 2,
+                  display: { xs: "flex", md: "flex" },
+                  fontFamily: "TimesNewRoman",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "black",
+                  textDecoration: "none",
+                  fontSize: 25,
+                  display: "block",
+                }}
               >
+                Horseoss
+              </Typography>{" "}
+            </li>
+            <li>
+              {" "}
+              <Typography
+                component="a"
+                href="/"
+                sx={{
+                  mr: 2,
+                  display: { xs: "flex", md: "flex" },
+                  fontFamily: "TimesNewRoman",
+                  fontWeight: 700,
 
-                 <ul style={{listStyleType:'none',display:'flex'}}>
-                <li style={{marginLeft:400}}> <Link href='/TermsAndConditions'><Typography> <CallIcon style={{ display:'inline'}}/> TermsAndConditions</Typography></Link></li>
-                <li style={{marginLeft:60}}> <Typography>SAR <ArrowDropDownIcon style={{ display:'inline'}}/></Typography></li>
-                <li style={{marginLeft:60}}> <Typography>UAE <ArrowDropDownIcon style={{ display:'inline'}}/></Typography></li> 
-                
-            </ul>
+                  color: "black",
+                  textDecoration: "none",
+                  fontSize: 18,
+                }}
+              >
+                Saddle up with Technology
+              </Typography>
+            </li>
+          </ul>
 
-              </Button>
-            
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "black", display: "block" }}
+            >
+              <ul style={{ listStyleType: "none", display: "flex" }}>
+                <li style={{ marginLeft: 400 }}>
+                  {" "}
+                  <Link href="/terms-and-conditions">
+                    <Typography>
+                      {" "}
+                      <CallIcon style={{ display: "inline" }} />{" "}
+                      TermsAndConditions
+                    </Typography>
+                  </Link>
+                </li>
+                <li style={{ marginLeft: 60 }}>
+                <Link href="/Contact-us">
+                    <Typography>
+                      {" "}
+                      <CallIcon style={{ display: "inline" }} />{" "}
+                      contact us
+                    </Typography>
+                  </Link>
+                </li>
+                <li style={{ marginLeft: 60 }}>
+                  {" "}
+                  <Typography>
+                    UAE <ArrowDropDownIcon style={{ display: "inline" }} />
+                  </Typography>
+                </li>
+              </ul>
+            </Button>
           </Box>
-          
-
-          
         </Toolbar>
       </Container>
     </AppBar>

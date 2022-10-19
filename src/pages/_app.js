@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "@mui/styles";
-import "../styles/globals.css";
+
 import theme from "../theme";
 
 

@@ -6,7 +6,7 @@ import CallIcon from "@mui/icons-material/Call";
 import React from "react";
 import Image from "next/image";
 import TextField from "@mui/material/TextField";
-import { makeStyles } from "@mui/styles";
+
 
 function Footer() {
   const badgeStyle = {
@@ -18,11 +18,10 @@ function Footer() {
       transform: "translate(86px,-10px)",
     },
   };
-  
- 
+
   return (
     <footer style={{ marginTop: 500 }}>
-      <Box sx={{ backgroundColor: "black", }}>
+      <Box sx={{ backgroundColor: "black" }}>
         <Container maxWidth="lg">
           <Grid container spacing={3}>
             <Grid item xs={12} sm={3}>
@@ -114,14 +113,14 @@ function Footer() {
             </Grid>
           </Grid>
           <Grid container>
-            <Grid item xs={4} sm={4} sx={{marginTop:10}}>
+            <Grid item xs={4} sm={4} sx={{ marginTop: 10 }}>
               <Box>
                 <Link href="# " color="white" underline="none">
                   Copyright ⓒ 2022. All Rights Reserves
                 </Link>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={4} sx={{marginTop:6}}>
+            <Grid item xs={12} sm={4} sx={{ marginTop: 6 }}>
               <Box
                 component="form"
                 sx={{
@@ -130,10 +129,25 @@ function Footer() {
                 noValidate
                 autoComplete="off"
               >
-                <TextField variant="standard" label='your mail'  sx={{input: { color: 'white' ,transform: "translate(12px,-9px)"}, backgroundColor:'#212121', borderTopLeftRadius:( 20, 20),borderBottomLeftRadius:( 20, 20),height:'35px' , transform: "translate(60px,10px)",alignLabel:'center'}} InputProps={{ disableUnderline: true, }} />
-                
+                <TextField
+                  variant="standard"
+                  label="your mail"
+                  sx={{
+                    input: {
+                      color: "white",
+                      transform: "translate(12px,-9px)",
+                    },
+                    backgroundColor: "#212121",
+                    borderTopLeftRadius: (20, 20),
+                    borderBottomLeftRadius: (20, 20),
+                    height: "35px",
+                    transform: "translate(60px,10px)",
+                    alignLabel: "center",
+                  }}
+                  InputProps={{ disableUnderline: true }}
+                />
               </Box>
-            
+
               <Box
                 component="form"
                 sx={{
@@ -142,8 +156,21 @@ function Footer() {
                 noValidate
                 autoComplete="off"
               >
-                
-                <Button variant='contained' sx={{backgroundColor:'#f5f5f5',  borderTopRightRadius:( 20, 20),borderBottomRightRadius:( 20, 20), borderTopLeftRadius:( 0, 0),borderBottomLeftRadius:( 0, 0),height:'34px',color:'black',transform: "translate(260px,-40px)" }}>Subscribe</Button>
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "#f5f5f5",
+                    borderTopRightRadius: (20, 20),
+                    borderBottomRightRadius: (20, 20),
+                    borderTopLeftRadius: (0, 0),
+                    borderBottomLeftRadius: (0, 0),
+                    height: "34px",
+                    color: "black",
+                    transform: "translate(260px,-40px)",
+                  }}
+                >
+                  Subscribe
+                </Button>
               </Box>
             </Grid>
           </Grid>
