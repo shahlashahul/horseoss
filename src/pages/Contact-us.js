@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import dynamic from "next/dynamic";
+import Header from "../../components/Header";
 import { Grid, Link, Select, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -13,12 +13,21 @@ import { Box } from "@mui/system";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import CallIcon from "@mui/icons-material/Call";
 import MaterialUiPhoneNumber from "material-ui-phone-number";
-import Image from "next/image";
+import { withGoogleMap, withScriptjs, GoogleMap } from "react-google-maps";
 
+class Map extends React.Component {
+  render = () => {
+    return (
+      <GoogleMap
+        defaultZoom={16}
+        defaultCenter={{ lat: 30.967171, lng: 29.552919 }}
+      ></GoogleMap>
+    );
+  };
+}
 
+const MapComponent = withScriptjs(withGoogleMap(Map));
 function Contactus() {
-  const HeaderComponent = dynamic(() => import("../../components/Header"));
-
   const [language, setLanguage] = useState("");
 
   const handleChange = (event) => {
@@ -40,7 +49,7 @@ function Contactus() {
 
   return (
     <>
-      <HeaderComponent title={"Contact us"} />
+      <Header title={"Contact Us"} />
       <Grid container>
         <Card
           sx={{
@@ -298,10 +307,14 @@ function Contactus() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid>
-        <Box sx={{ marginTop: 10 }}>
-          <Image src="/uae.jpg" width="1500px" height="500px" />
-        </Box>
+
+      <Grid className="google-map-code" sx={{ marginTop: 10 }}>
+        <MapComponent
+          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCvLFfor-m1cMcKv-2OMacNZDkGUOo7l5k"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `400px`, width: "100%" }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
       </Grid>
     </>
   );

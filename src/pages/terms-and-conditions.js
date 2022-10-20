@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic'
+import Header from "../../components/Header";
 import { Grid, Typography } from "@mui/material";
 
 const TermsComponent = ({ title, description }) => {
@@ -14,11 +14,10 @@ const TermsComponent = ({ title, description }) => {
   );
 };
 
-const TermsAndConditions = () => {
-  const HeaderComponent = dynamic(() => import("../../components/Header"));
+
   return (
     <div>
-      <HeaderComponent  title={"Terms And Conditions"} />
+      <Header  title={"Terms And Conditions"} />
       <Grid container>
         <Grid item md={6} xl={12} sx={{ marginLeft: 7 }}>
           <TermsComponent

@@ -105,11 +105,20 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li style={{ marginLeft: 60 }}>
-                <Link href="/Contact-us">
+                <Link href="/contact-us">
                     <Typography>
                       {" "}
                       <CallIcon style={{ display: "inline" }} />{" "}
                       contact us
+                    </Typography>
+                  </Link>
+                </li>
+                <li style={{ marginLeft: 60 }}>
+                <Link href="/home">
+                    <Typography>
+                      {" "}
+                      <CallIcon style={{ display: "inline" }} />{" "}
+                      home
                     </Typography>
                   </Link>
                 </li>
