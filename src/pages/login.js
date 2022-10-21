@@ -14,17 +14,19 @@ function login() {
   return (
     <div>
     <Grid
-      container
+      container 
+      justifyContent='center'
       sx={{
         backgroundImage: 'url("/dw-bg.png")',
-        padding: 5,
+       
         backgroundSize: "cover",
         backgroundRepeat:'no-repeat',
-        paddingTop:20,paddingBottom:20,paddingLeft:70,
+        paddingTop:20,paddingBottom:20,
          height: '100%' 
       }}
     >
-      <Grid item>
+      <Grid item sm={12} justifyContent="center">
+        
       <Paper
         elevation={0}
         sx={{
@@ -34,6 +36,7 @@ function login() {
           margin: "20px auto",
           justify: "space-around",
           borderRadius: 5,
+          
         }}
       >
         <Typography variant="h4" textAlign="center" gutterBottom="2px">
