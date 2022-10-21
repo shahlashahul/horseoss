@@ -14,7 +14,7 @@ const TermsComponent = ({ title, description }) => {
   );
 };
 
-
+function TermsAndConditions() {
   return (
     <div>
       <Header  title={"Terms And Conditions"} />
