@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/styles";
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import theme from "../theme";
-import Moment from 'moment'
+import '../../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
