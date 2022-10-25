@@ -1,15 +1,19 @@
 import React from "react";
 import Link from "@mui/material/Link";
 import { Grid, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 function Header({ title }) {
 
     return (
-      <>
+     <>
         <Grid
-          container
-          sx={{ backgroundImage: 'url("/dw-bg.png")', height: 150, paddingTop:5 }}
+          container 
+          sx={{ backgroundImage: 'url("/dw-bg.png")', height: 150, paddingTop:5,
+            
+            width: '100%',
+         }}
         >
-          <Grid md={6} xl={12}>
+          <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
             <Typography
               variant="h5"
               sx={{ color: "white", marginLeft: 7, paddingTop: 2 }}
@@ -58,7 +62,8 @@ function Header({ title }) {
             </Link>
           </Grid>
         </Grid>
-      </>
+      
+        </>
     );
   };
 
